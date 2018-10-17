@@ -1,0 +1,78 @@
+<form [formGroup]="editTsForm">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 heading-darkgray">
+        <span>Employee Entry {{data.employee?.DateFrom | date:"MM/dd/yyyy"}}</span>
+      </div>
+    </div>
+    
+
+    <div class="row">
+        <div class="col-xs-12">
+          <mat-form-field>
+            <!--<mat-select placeholder="UserID" formControlName="UserID">
+              <mat-option *ngFor="let time of timesList" [value]="time.value">{{time.name}}</mat-option>-->
+                  <input matInput mat-autosize placeholder="User Name" matAutosizeMinRows="1"  formControlName="UserName">         
+            <mat-error>Required.</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          <mat-form-field>
+            <!--<mat-select placeholder="UserID" formControlName="UserID">
+              <mat-option *ngFor="let time of timesList" [value]="time.value">{{time.name}}</mat-option>-->
+              <!--<mat-input ng-attr-type="{{ showPassword ? 'text' : 'password' }}">!-->
+                  <input matInput mat-autosize placeholder="Job Title" matAutosizeMinRows="1"  formControlName="JobTitle">         
+            <mat-error>Required.</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          <mat-form-field>
+            <!--<mat-select placeholder="UserID" formControlName="UserID">
+              <mat-option *ngFor="let time of timesList" [value]="time.value">{{time.name}}</mat-option>-->
+                  <input matInput mat-autosize placeholder="Address" matAutosizeMinRows="1"  formControlName="Address">         
+            <mat-error>Required.</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          <mat-form-field>
+            <!--<mat-select placeholder="UserID" formControlName="UserID">
+              <mat-option *ngFor="let time of timesList" [value]="time.value">{{time.name}}</mat-option>-->
+                  <input matInput mat-autosize placeholder="Email" matAutosizeMinRows="1"  formControlName="EmailAddress">         
+            <mat-error>Required.</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          <mat-form-field>
+            <!--<mat-select placeholder="UserID" formControlName="UserID">
+              <mat-option *ngFor="let time of timesList" [value]="time.value">{{time.name}}</mat-option>-->
+      <input matInput mat-autosize placeholder="Salary" matAutosizeMinRows="1"  formControlName="Salary">        
+            <mat-error>Required.</mat-error>
+          </mat-form-field>
+        </div>
+    </div>
+
+    
+
+    <input type="hidden" formControlName="UserId" />
+    <div class="row">
+      <div class="col-xs-6" *ngIf="!data.noCancel">
+        <button class="btn btn-margin" mat-dialog-close>{{data.cancelAction}}</button>
+      </div>
+      <div class="col-xs-6" [ngClass]="{'col-xs-push-3':data.noCancel === 'true'}">
+        <button class="btn btn-margin" (click)="closeDialog()" *ngIf="data.action" [ngClass]="{'btn-submit' :data.actionButtonColor === 'submit'}">{{data.action}}</button>
+      </div>
+    </div>
+  </div>
+</form>

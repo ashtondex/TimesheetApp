@@ -1,0 +1,90 @@
+#navigation {
+  width: calc(100% - 30px);
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  background: #3a3a3a;
+  color: #ffffff;
+  font-size: 13px;
+  -moz-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.16);
+  height: 40px;
+  border-radius: 3px;
+  min-width: 1200px;
+}
+
+#navigation-space {
+  height: 40px;
+}
+
+#firstIcon {
+  border-radius: 3px 0 0 3px;
+}
+
+.menuItem {
+  border: 1px solid #5d5d5d;
+  padding: 12px 15px 0 15px;
+  height: 40px;
+  font-size: 13px;
+  color: #ffffff;
+  float: left;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background: #dddddd;
+  color: #3a3a3a;
+}
+
+.rightMenuItem {
+  float: right;
+  cursor: auto;
+}
+
+.menuButton {
+  float: left;
+  color: #ffffff;
+  border: 1px solid #5d5d5d;
+  height: 100%;
+}
+
+.mat-button {
+  height: 100%;
+  padding: 0px 15px 0 15px;
+}
+
+.menuButton:hover {
+  background: #dddddd;
+  color: #3a3a3a;
+}
+
+.credit-package-menu-searchbox {
+  text-align: left;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100%;
+}
+
+::ng-deep .cdk-focused {
+  background: #dddddd;
+  color: #3a3a3a;
+}
+
+::ng-deep .mat-button-wrapper {
+  font-size: 13px !important;
+}
+
+::ng-deep .mat-menu-item {
+  font-size: 13px;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+}
+
+.search-box {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 96% !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}

@@ -1,0 +1,53 @@
+<div class="container section-border overlayParent">
+    <div class="row">
+      <div class="col-xs-12 heading-darkgray">
+        <span>Employee Entry</span>
+      </div>
+    </div>
+    
+      <div class="col-sm-2">
+        <button type="button" (click)="createEmployee()" class="btn btn-margin">New</button>
+      </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table">
+          <tr class="thead">
+            <th class="userId">userId</th>
+            <th class="userName">userName</th>
+            <th class="fullName">fullName</th>
+            <th class="jobTitle">jobTitle</th>
+            <th class="Address">Address</th>
+            <th class="Email">Email</th>
+            <th class="Salary">Salary</th>
+            <th class="colEdit">Edit</th>
+            <th class="colDelete">Delete</th>
+          </tr>
+          <tr *ngFor="let ts of employees">
+            <td class="userId">{{ts.UserId }}</td>
+            <td class="userName">{{ts.UserName}}</td>
+            <td class="fullName">{{ts.FullName}}</td>
+            <td class="jobTitle">{{ts.JobTitle}}</td>
+            <td class="Address">{{ts.Address}}</td>
+            <td class="Email">{{ts.EmailAddress}}</td>
+            <td class="Salary">{{ts.Salary}}</td>
+           
+            <td>
+              <a class="colEdit" (click)="editEmployee(ts)" role="button">
+                <i matTooltip="Edit" class="fa fa-pencil icon" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>
+              <a class="colDelete" (click)="deleteEmployee(ts)" role="button">
+                <i matTooltip="Delete" class="fa fa-trash-o" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="employees?.length === 0">
+            <td colspan="13" class="text-align-center">There are currently 0 employees </td>
+          </tr>
+        </table>
+        </div>
+    </div>
+</div>
+       
+  

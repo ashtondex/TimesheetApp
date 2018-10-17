@@ -1,0 +1,18 @@
+<div id="navigation" *ngIf="user">
+  <div class="menuItem" *ngIf="showTimesheetMenu" [routerLink]="['timesheet']">Timesheet</div>
+  <div class="menuButton" *ngIf="showManageProjectMenu" (click)="loadProjects()">
+    <button mat-button [matMenuTriggerFor]="projectsMenu">Manage Project</button>
+  </div>
+  <mat-menu #projectsMenu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item *ngFor="let project of projects" [routerLink]="['project',project.ProjectId]">{{project.Title}}</button>
+  </mat-menu>
+  <div class="menuItem" *ngIf="showMaintainEmployeeMenu" [routerLink]="['employee']">Maintain Employees</div>
+  <div class="menuItem" *ngIf="showMaintainProjectMenu" [routerLink]="['project']">Maintain Projects</div>
+  <div id="navigation-username" class="menuButton" class="rightMenuItem">
+    <button mat-button [matMenuTriggerFor]="userMenu">{{user.FullName}}</button>
+  </div>
+  <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+    <button mat-menu-item (click)="logoutClick()">Log Out</button>
+  </mat-menu>
+</div>
+<div id="navigation-space"></div>

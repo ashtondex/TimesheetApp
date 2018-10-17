@@ -1,0 +1,86 @@
+<form [formGroup]="editTsForm">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 heading-darkgray">
+        <span>Project Entry {{data.project?.DateFrom | date:"MM/dd/yyyy"}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Project Name	Budget	Customer	Supervisor	Description	Edit	Delete-->
+      <div class="col-xs-12">
+        <mat-form-field>
+            <input matInput mat-autosize placeholder="Project Name" matAutosizeMinRows="1"  formControlName="ProjectName">         
+          <mat-error>Time started is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+        <div class="row">
+            <!-- Project Name	Budget	Customer	Supervisor	Description	Edit	Delete-->
+            <div class="col-xs-12">
+              <mat-form-field>
+                  <input matInput mat-autosize placeholder="Budget" matAutosizeMinRows="1"  formControlName="Budget">         
+                <mat-error>Time started is required.</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="row">
+              <!-- Project Name	Budget	Customer	Supervisor	Description	Edit	Delete-->
+              <div class="col-xs-12">
+                <mat-form-field>
+                    <input matInput mat-autosize placeholder="Customer" matAutosizeMinRows="1"  formControlName="Customer">         
+                  <mat-error>Time started is required.</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+                <!-- Project Name	Budget	Customer	Supervisor	Description	Edit	Delete-->
+                <div class="col-xs-12">
+                  <mat-form-field>
+                      <input matInput mat-autosize placeholder="Supervisor" matAutosizeMinRows="1"  formControlName="Supervisor">         
+                    <mat-error>Time started is required.</mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+
+        
+      <!--<div class="col-xs-12">
+        <mat-form-field>
+          <mat-select placeholder="Time Finished" formControlName="DateToHours">
+            <mat-option *ngFor="let time of timesList" [value]="time.value">{{time.name}}</mat-option>
+          </mat-select>
+          <mat-error>Time finished is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <mat-form-field>
+          <mat-select placeholder="Project" formControlName="ProjectId">
+            <mat-option>- Select - </mat-option>
+            <mat-option *ngFor="let project of projects" [value]="project.ProjectId">{{project.Title}}</mat-option>
+          </mat-select>
+          <mat-error>Project is required.</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 form-row-height">
+        <!--<mat-form-field>
+          <textarea matInput mat-autosize placeholder="Description" matAutosizeMinRows="4" (keyup)="descriptionOnKeyUp($event)" formControlName="Description"></textarea>
+          <mat-hint>{{charactersLeft}} characters left.</mat-hint>
+        </mat-form-field>-->
+     
+    <input type="hidden" formControlName="ProjectId" />
+    <div class="row">
+      <div class="col-xs-6" *ngIf="!data.noCancel">
+        <button class="btn btn-margin" mat-dialog-close>{{data.cancelAction}}</button>
+      </div>
+      <div class="col-xs-6" [ngClass]="{'col-xs-push-3':data.noCancel === 'true'}">
+        <button class="btn btn-margin" (click)="closeDialog()" *ngIf="data.action" [ngClass]="{'btn-submit' :data.actionButtonColor === 'submit'}">{{data.action}}</button>
+      </div>
+    </div>
+  </div>
+</form>

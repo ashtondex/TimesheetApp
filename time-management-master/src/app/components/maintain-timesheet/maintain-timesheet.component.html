@@ -1,0 +1,67 @@
+<div class="container section-border overlayParent">
+  <form [formGroup]="tsForm">
+    <div class="row">
+      <div class="col-xs-12 heading-darkgray">
+        <span>Timesheet Entry</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-form-field>
+          <input matInput [matDatepicker]="pickerDate1" placeholder="Timesheet Date" formControlName="Date">
+          <mat-datepicker-toggle matSuffix [for]="pickerDate1"></mat-datepicker-toggle>
+          <mat-datepicker #pickerDate1></mat-datepicker>
+          <mat-error>Date is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" (click)="submitDate()" class="btn btn-margin">Search</button>
+      </div>
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-2">
+        <button type="button" (click)="createTimesheet()" class="btn btn-margin">New</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table">
+          <tr class="thead">
+            <th class="colFrom">FROM</th>
+            <th class="colTo">TO</th>
+            <th class="colHours"># Hours</th>
+            <th class="colProject">Project</th>
+            <th class="colDescription">Description</th>
+            <th class="colEdit">Edit</th>
+            <th class="colDelete">Delete</th>
+          </tr>
+          <tr *ngFor="let ts of timesheets">
+            <td class="colFrom">{{ts.CreatedOn | customTime:ts.DateFromHours}}</td>
+            <td class="colTo">{{ts.CreatedOn | customTime:ts.DateToHours}}</td>
+            <td class="colHours">{{ts.TotalHours}}</td>
+            <td class="colProject overflowHide">
+              {{ts.ProjectName}}
+            </td>
+            <td class="colDescription overflowHide">
+              {{ts.Description}}
+            </td>
+            <td>
+              <a class="colEdit" (click)="editTimesheet(ts)" role="button">
+                <i matTooltip="Edit" class="fa fa-pencil icon" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>
+              <a class="colDelete" (click)="deleteTimesheet(ts)" role="button">
+                <i matTooltip="Delete" class="fa fa-trash-o" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="timesheets?.length === 0">
+            <td colspan="13" class="text-align-center">There are currently no Timesheets entered on {{tsForm.get('Date')?.value | date:'MM/dd/yyyy'}}.</td>
+          </tr>
+        </table>
+        <br />
+      </div>
+    </div>
+  </form>
+</div>

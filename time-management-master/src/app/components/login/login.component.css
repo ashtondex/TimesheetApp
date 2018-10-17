@@ -1,0 +1,38 @@
+.colFrom,
+.colTo {
+  width: 145px;
+  text-align: left;
+}
+
+.colTotal {
+  width: 70px;
+}
+
+.colProject {
+  width: 15%;
+  text-align: left;
+}
+
+.colDescription {
+  text-align: left;
+}
+
+.colExpand {
+  width: 5%;
+}
+
+.sectionBorder {
+  border: 2px solid #c0c4c7;
+  border-radius: 5px;
+}
+
+.container-fluid {
+  width: 450px;
+  margin-top: 100px;
+  border-width: 5cm;
+  border-color: black;
+}
+
+.loginbutton {
+  color:#c0c4c7;
+}

@@ -1,0 +1,78 @@
+<div class="container section-border overlayParent">
+  <form [formGroup]="tsForm">
+    <div class="row">
+      <div class="col-xs-12 heading-darkgray">
+        <span>Project Entry</span>
+      </div>
+    </div>
+    <div class="row">
+      <!--<div class="col-sm-4">
+        <mat-form-field>
+          <input matInput [matDatepicker]="pickerDate1" placeholder="Project Date" formControlName="Date">
+          <mat-datepicker-toggle matSuffix [for]="pickerDate1"></mat-datepicker-toggle>
+          <mat-datepicker #pickerDate1></mat-datepicker>
+          <mat-error>Date is required</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="col-sm-2">
+        <button type="button" (click)="submitDate()" class="btn btn-margin">Search</button>
+      </div>-->
+      <div class="col-sm-10">
+      </div>
+      <div class="col-sm-2">
+        <button type="button" (click)="createProject()" class="btn btn-margin">New</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table">
+          <tr class="thead">
+            <th class="colProjectName">Project Name</th>
+            <th class="colBudget">Budget</th>
+            <th class="colCustomer">Customer</th>
+            <th class="colSupervisor">Supervisor</th>
+            <th class="colDescription">Description</th>
+            <th class="colEdit">Edit</th>
+            <th class="colDelete">Delete</th>
+          </tr>
+          <tr *ngFor="let ts of projects">
+              <td class="colProjectName">{{ts.Title}}</td>
+              <td class="colBudget">{{ts.Budget}}</td>
+              <td class="colCustomer">{{ts.Customer}}</td>
+              <td class="colSupervisor">{{ts.SupervisorName}}</td>
+              <td class="colDescription">{{ts.Description}}</td>
+              <td class="colEdit">Edit</td>
+              <td class="colDelete">Delete</td>
+         <!--   <th class="colProjectName">{{ts.Title}</th>
+            <th class="colBudget">{{ts.Budget}}</th>
+            <th class="colCustomer">{{ts.Customer}}</th>
+            <th class="colCreatedOn">{{ts.CreatedOn}}</th>
+            <!--<td class="colProjectName">{{ts.CreatedOn | customTime:ts.DateFromHours}}</td>
+            <td class="colCreatedOn">{{ts.CreatedOn | customTime:ts.DateToHours}}</td>
+            <td class="col">{{ts.TotalHours}}</td>
+            <td class="colProject overflowHide">
+              {{ts.ProjectName}}
+            </td>-->
+            <td class="colDescription overflowHide">
+              {{ts.Description}}
+            </td>
+            <td>
+              <a class="colEdit" (click)="editProject(ts)" role="button">
+                <i matTooltip="Edit" class="fa fa-pencil icon" aria-hidden="true"></i>
+              </a>
+            </td>
+            <td>
+              <a class="colDelete" (click)="deleteProject(ts)" role="button">
+                <i matTooltip="Delete" class="fa fa-trash-o" aria-hidden="true"></i>
+              </a>
+            </td>
+          </tr>
+          <tr *ngIf="projects?.length === 0">
+            <td colspan="13" class="text-align-center">There are currently 0 projects entered on {{tsForm.get('Date')?.value | date:'MM/dd/yyyy'}}.</td>
+          </tr>
+        </table>
+        <br />
+      </div>
+    </div>
+  </form>
+</div>

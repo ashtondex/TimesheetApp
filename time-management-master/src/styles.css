@@ -1,0 +1,539 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+html,
+body {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #dcdcdc;
+  background: -webkit-linear-gradient(#fff, #dcdcdc);
+  background: -o-linear-gradient(#fff, #dcdcdc);
+  background: -moz-linear-gradient(#fff, #dcdcdc);
+  background: linear-gradient(#fff, #dcdcdc);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+p,
+span,
+strong,
+b,
+ul,
+a {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+button,
+input,
+select,
+option,
+.dropdown,
+.table tbody {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.error {
+  color: #9d242b;
+}
+
+.blue-link {
+  color: #0000ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.label {
+  font-weight: bold;
+}
+
+hr {
+  margin: 0;
+}
+
+/***** Background and Border colors *****/
+
+.bg-navy {
+  background-color: #004762;
+}
+
+.bg-orange {
+  background-color: #d89016;
+}
+
+.bg-dark-gray {
+  background-color: #3a3a3a;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-light-gray {
+  background-color: #f3f3f3;
+}
+
+.form-field-border {
+  border: 1px solid #ccc;
+}
+
+.grid-row-divider {
+  background-color: #ddd;
+}
+
+.nav-divider {
+  background-color: #5d5d5d;
+}
+
+.bg-red {
+  background-color: #9d242b;
+}
+
+.bg-pink {
+  background-color: #fff3f3;
+}
+
+/***** Buttons *****/
+
+.btn {
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  height: 35px;
+  min-width: 60px;
+  width: 100%;
+}
+
+.btn > span {
+  background-color: #f3f3f3;
+  color: #000;
+  font-size: 16px;
+}
+
+.btn-submit,
+.btn-submit > span {
+  background-color: #867875;
+  color: #fff;
+}
+
+.btn-alert {
+  background-color: #9d242b;
+  color: #fff;
+}
+
+.btn-margin {
+  margin: 20px 0px 30px 0px;
+}
+
+/***** Grids and Headings and Tables *****/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+table,
+thead,
+tbody,
+tbody tr,
+thead tr {
+  border: #ddd;
+}
+
+.table {
+  margin: 0 !important;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+  padding: 5px;
+  text-align: center;
+}
+
+.thead {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 35px;
+  color: #000000;
+  font-size: 13px;
+  border-bottom: 1px solid #ddd;
+}
+
+.thead > th {
+  background-color: #f7f7f7 !important;
+  border-top: 1px solid #ddd !important;
+  border-right: 1px solid #ddd !important;
+  border-left: 1px solid #ddd !important;
+  height: 35px !important;
+  color: #000000 !important;
+}
+
+.table > tbody > tr > td:first-child {
+  border-left: 1px solid #ddd;
+}
+
+.table > tbody > tr > td {
+  border-right: 1px solid #ddd;
+}
+
+.tbody,
+.tbody > tr > td {
+  border: 1px solid #ddd !important;
+}
+
+.scrollable,
+.scrollable > thead,
+.scrollable > tbody {
+  display: block;
+}
+
+.scrollable {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 300px;
+}
+
+.grid-footer-gray th {
+  background-color: #f7f7f7;
+  font-size: 13px;
+  height: 35px;
+}
+
+.Red {
+  color: #9d242b;
+  font-weight: bold;
+}
+
+.Green {
+  color: #258460;
+  font-weight: bold;
+}
+
+.Black {
+  color: #000000;
+}
+
+.sub-header {
+  background-color: #867875;
+  color: white;
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 5px;
+  width: 100%;
+}
+
+.heading-gray {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: 35px;
+  color: #000000;
+  font-size: 13px;
+  border: 1px solid #ddd;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+/***** Form Fields *****/
+
+.mat-form-field {
+  width: 100% !important;
+}
+
+.form-row-height {
+  min-height: 65.5px !important;
+  height: 100%;
+}
+
+.form-row-height > .label {
+  margin-top: 20px;
+}
+
+.mat-radio-label-content,
+.mat-input-element {
+  font-size: 13px !important;
+}
+
+.mat-radio-button {
+  margin-right: 3px;
+}
+
+.mat-checkbox-layout {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  margin: 11px 0 11px 0;
+}
+
+.error {
+  color: red;
+  margin: 5px 0;
+}
+
+.mat-select.mat-select-disabled {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+/***** Term Module *****/
+
+.term-highlight {
+  background-color: yellow;
+}
+
+.text-align-right {
+  text-align: right !important;
+}
+.text-align-left {
+  text-align: left !important;
+}
+.text-align-center {
+  text-align: center !important;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.termComponent {
+  overflow: hidden;
+}
+
+a:visited {
+  color: blue;
+}
+a.Black {
+  color: blue;
+}
+
+.termInput {
+  font-family: Lato, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  width: 100%;
+  height: 21px;
+  margin: 2px 0px;
+}
+
+/***** Tooltip text *****/
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/***** Notification Service *****/
+
+.alert-success {
+  color: #3c763d !important;
+  background-color: #dff0d8 !important;
+  border-color: #d6e9c6 !important;
+}
+.alert-danger {
+  color: #a94442 !important;
+  background-color: #f2dede !important;
+  border-color: #ebccd1 !important;
+}
+.alert-warning {
+  color: #8a6d3b !important;
+  background-color: #fcf8e3 !important;
+  border-color: #faebcc !important;
+}
+.alert-info {
+  color: #31708f !important;
+  background-color: #d9edf7 !important;
+  border-color: #bce8f1 !important;
+}
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px !important;
+}
+
+/***** Spinner *****/
+
+.divSpinner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 30%;
+  margin: auto;
+}
+
+.overlayParent {
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999999999;
+}
+
+.spinner {
+  margin: auto;
+  top: calc(50% - 50px);
+}
+
+.spinner-label {
+  top: 50%;
+  position: relative;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* This style is applied to the navigation component. It is used to increase the width of credit package menu. If this style is put in the component's CSS
+   e.g. Navigation.component.css then it is not working.encapsulation: ViewEncapsulation.None can be used but that affects the styles of other menu.
+  Keep it here untill better solution is found.*/
+
+.credit-package-menu {
+  max-width: 550px !important;
+  min-width: 500px !important;
+}
+
+/***** Drag and Drop File Upload *****/
+
+.fileupload .drop-container {
+  background: white;
+  border-radius: 6px;
+  height: 150px;
+  width: 100%;
+  box-shadow: 1px 2px 20px rgba(10, 10, 10, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #c0c4c7;
+  margin: 15px 0;
+}
+
+.fileupload .drop-container p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #c0c4c7;
+}
+
+.fileupload .drop-container p .upload-button {
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #5754a3;
+}
+
+.fileupload .drop-container p .upload-button input {
+  display: none;
+}
+
+.fileupload .drop-container p .upload-button {
+  display: inline-block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #5754a3;
+}
+
+.fileupload .upload-items {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.fileupload .btnRemoveFile {
+  cursor: pointer;
+  margin: 2px;
+}
+
+/***** Miscellaneous *****/
+
+.section-border {
+  border: 1px solid #cccccc;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.linkDisabled {
+  color: gray !important;
+  cursor: default !important;
+  font-weight: normal !important;
+  pointer-events: none !important;
+  text-decoration: none !important;
+}
+
+.disabled {
+  background: #ebebe4;
+  color: gray !important;
+  cursor: default !important;
+  font-weight: normal !important;
+  pointer-events: none !important;
+  text-decoration: none !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.link-button {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  color: #00f;
+  text-decoration: underline;
+  font: inherit;
+}
+
+.icon {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.heading-darkgray {
+  background-color: #867875;
+  width: 100%;
+  height: 35px;
+  color: white;
+  font-size: 13px;
+  border: 1px solid #867875;
+  font-weight: bold;
+  padding: 10px 15px;
+}

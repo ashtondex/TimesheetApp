@@ -1,0 +1,22 @@
+.colFrom,
+.colTo {
+  width: 145px;
+}
+
+.colHours {
+  width: 70px;
+}
+
+.colProject {
+  width: 15%;
+  text-align: left;
+}
+
+.colDescription {
+  text-align: left;
+}
+
+.colEdit,
+.colDelete {
+  width: 5%;
+}
